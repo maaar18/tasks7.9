@@ -4,18 +4,17 @@ def odd_numbers(n):
       digit = n % 10 
       if digit % 2 != 0:
             mult = mult * digit
-            n = n // 10
+      n = n // 10
    return(mult)
 
 
 n = input("Введите число:")
 try:
    n = int(n)
-except VallueError:
-   print("Ошибка") 
-print("Произведение равно:", odd_numbers(n))
-
-   
+except ValueError:
+   print("Ошибка")
+   exit()
+print("Произведение равно:", odd_numbers(n))   
     
    
 
